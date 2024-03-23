@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{045574C6-CD18-4573-BBB0-695C44E16BA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MicsonControlExt</RootNamespace>
+    <AssemblyName>MicsonControlExt</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MicsonControlExt.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MicsonControlExt.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\BouncyCastle.Cryptography.2.3.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\OpcUaHelper\packages\Microsoft.Extensions.Logging.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Security.Certificates, Version=1.5.374.0, Culture=neutral, PublicKeyToken=bfa7a73c5cf4b6e8, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\OPCFoundation.NetStandard.Opc.Ua.Security.Certificates.1.5.374.27\lib\net48\Opc.Ua.Security.Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Formats.Asn1.8.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Security.Cryptography.Cng.5.0.0\lib\net47\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\OPCServerDemo\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonControl\ButtonExt\ButtonExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ColorPickerExt\ColorPickerExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ColorPickerExt\ColorPickerExtDesigner.vb" />
+    <Compile Include="CommonControl\ColorPickerExt\ColorPickerExtTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ComboboxExt\ComboboxExt.Designer.vb">
+      <DependentUpon>ComboboxExt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControl\ComboboxExt\ComboboxExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ComboboxExt\InputTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ListBoxExt\ListBoxExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ContextMenuStripExt\ContextMenuStripExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\FormExt\FormExt.Designer.vb">
+      <DependentUpon>FormExt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControl\FormExt\FormExt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonControl\FormExt\FrmDialog.Designer.vb">
+      <DependentUpon>FrmDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControl\FormExt\FrmDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonControl\LabelExt\LabelExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\LabelExt\MessageExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\MessageBoxExt\MessageBoxExt.vb" />
+    <Compile Include="CommonControl\RoundedRectangle.vb" />
+    <Compile Include="CommonControl\ToolStripDropDownButtonExt\ToolStripDropDownButtonExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ToolStripMenuItemExt\ToolStripMenuItemExt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\ToolStripProfessionalRendererExt\ToolStripProfessionalRendererExt.vb" />
+    <Compile Include="CommonControl\ToopStripEx\ToolStripEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Common.vb" />
+    <Compile Include="Common\Control.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Editor\AngleEditor.vb" />
+    <Compile Include="Common\Editor\CollectionEditorExt.vb" />
+    <Compile Include="Common\Editor\ColorEditorExt.vb" />
+    <Compile Include="Common\Editor\DottedLineBorderExtDesigner.vb" />
+    <Compile Include="Common\Editor\RadioButtonExtDesigner.vb" />
+    <Compile Include="Common\Editor\TextEditorExt.vb" />
+    <Compile Include="Common\EmptyConverter.vb" />
+    <Compile Include="Resx\ComboboxExt\Combobox.Designer.vb">
+      <DependentUpon>Combobox.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resx\MessageBox_Default.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageBox_Default.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\MessageBox_Other.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageBox_Other.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resx\SysControl_Default.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysControl_Default.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\SysControl_Other.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysControl_Other.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonControl\ComboboxExt\ComboboxExt.resx">
+      <DependentUpon>ComboboxExt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControl\ComboboxExt\InputTextBox.resx">
+      <DependentUpon>InputTextBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControl\ListBoxExt\ListBoxExt.resx">
+      <DependentUpon>ListBoxExt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControl\FormExt\FormExt.resx">
+      <DependentUpon>FormExt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControl\FormExt\FrmDialog.resx">
+      <DependentUpon>FrmDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\ComboboxExt\Combobox.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Combobox.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\MessageBox_Default.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <LastGenOutput>MessageBox_Default.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\MessageBox_Other.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <LastGenOutput>MessageBox_Other.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\SysControl_Default.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>SysControl_Default.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\SysControl_Other.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>SysControl_Other.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_close_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_close_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_maximize_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_maximize_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_minimizing_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_minimizing_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_normal_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_normal_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_minimizing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDown_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDown_blue.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
